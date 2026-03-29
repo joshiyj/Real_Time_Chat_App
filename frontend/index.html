@@ -5,6 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>frontend</title>
+    <script>
+      const savedTheme = localStorage.getItem("chat-theme");
+      const defaultTheme =
+        document.documentElement.getAttribute("data-theme") || "cupcake";
+      document.documentElement.setAttribute(
+        "data-theme",
+        savedTheme || defaultTheme
+      );
+    </script>
   </head>
   <body>
     <div id="root"></div>
